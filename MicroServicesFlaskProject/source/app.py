@@ -12,8 +12,8 @@ cors = CORS(app)
 
 @app.route("/")
 def main():
-    # return "Hello Flask!"
-    return render_template('app.html')
+    return "Hello Flask!"
+    # return render_template('app.html')
 
 
 # Funciones Calculadora
