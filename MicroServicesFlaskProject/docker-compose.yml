@@ -20,6 +20,11 @@ services:
         ports: 
             - "4740:4740"
         container_name: "division"
+    potencia:
+        build: ./potencia
+        ports: 
+            - "4750:4750"
+        container_name: "potencia"
     app:
         build: ./source
         volumes:
@@ -31,6 +36,7 @@ services:
             - resta
             - multiplicacion
             - division
+            - potencia
         container_name: "app"
         
     
