@@ -39,6 +39,11 @@ def send(sum=sum):
         elif operation == 'divide':
             sum = (requests.get('http://division:4740/api/division?firstNumber='+firstNumber+'&secondNumber='+secondNumber)).text
             return render_template('app.html', sum=sum)
+
+        elif operation == 'poten':
+            sum = (requests.get('http://potencia:4750/api/potencia?firstNumber='+firstNumber+'&secondNumber='+secondNumber)).text
+            return render_template('app.html', sum=sum)
+        
         else:
             return render_template('app.html,', sum="Debe ingresar los numeros para calcular")
 

@@ -15,3 +15,11 @@ RUN pip3 --no-cache-dir install -r requirements.txt
 COPY . /usr/src/app
 
 CMD ["python3", "app.py"]
+
+
+FROM jenkins/jenkins:lts-jdk11
+USER root
+RUN apt-get update
+RUN apt-get install -y python3-pip
+# Install app dependencies
+RUN pip install --upgrade pip
