@@ -12,8 +12,8 @@ cors = CORS(app)
 
 @app.route("/")
 def main():
-    return "Hello Flask!"
-    # return render_template('app.html')
+    # return "Hello Flask!"
+    return render_template('app.html')
 
 
 # Funciones Calculadora
@@ -81,5 +81,5 @@ def send(sum=sum):
 
 
 
-# if __name__ == '__main__':
-#     serve(app, host='0.0.0.0', port='4700')
+if __name__ == '__main__':
+    serve(app, host='0.0.0.0', port='4700')
